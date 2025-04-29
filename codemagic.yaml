@@ -1,0 +1,18 @@
+workflows:
+  android-workflow:
+    name: Solar Predictor Android Build
+    environment:
+      vars:
+        PACKAGE_NAME: "com.example.solarpredictor"
+      flutter: "false"
+      java: "17"
+    scripts:
+      - echo "⭐ Start Android Build"
+      - cd app
+      - ./gradlew assembleRelease
+    artifacts:
+      - app/build/outputs/**/*.apk
+    publishing:
+      email:
+        recipients:
+          - your_email@example.com  # 원하는 이메일로 변경 가능
