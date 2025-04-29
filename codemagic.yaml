@@ -4,7 +4,7 @@ workflows:
     environment:
       vars:
         PACKAGE_NAME: "com.example.solarpredictor"
-      flutter: "false"
+      
       java: "17"
     scripts:
       - echo "⭐ Start Android Build"
