@@ -4,11 +4,10 @@ workflows:
     environment:
       vars:
         PACKAGE_NAME: "com.example.solarpredictor"
-      
       java: "17"
     scripts:
       - echo "⭐ Start Android Build"
-      - cd app
+      - chmod +x ./gradlew
       - ./gradlew assembleRelease
     artifacts:
       - app/build/outputs/**/*.apk
