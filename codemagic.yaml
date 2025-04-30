@@ -7,12 +7,12 @@ workflows:
       java: "17"
     scripts:
       - echo "⭐ Start Android Build"
-      - chmod +x gradlew
-      - ./gradlew assembleRelease
+      - cd app
+      - chmod +x ../gradlew
+      - ../gradlew assembleRelease
     artifacts:
       - app/build/outputs/**/*.apk
     publishing:
       email:
         recipients:
-          - your_email@example.com
-          
+          - hyeji8210@gmail.com
