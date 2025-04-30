@@ -6,9 +6,10 @@ workflows:
         PACKAGE_NAME: "com.example.solarpredictor"
       java: "17"
     scripts:
-      - echo "⭐ Start Android Build"
-      - chmod +x gradlew
-      - sh gradlew assembleRelease
+  - echo "⭐ Start Android Build"
+  - cd app
+  - chmod +x ../gradlew
+  - ../gradlew assembleRelease
     artifacts:
       - app/build/outputs/**/*.apk
     publishing:
