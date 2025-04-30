@@ -7,7 +7,7 @@ workflows:
       java: "17"
     scripts:
       - echo "⭐ Start Android Build"
-      - chmod +x ./gradlew
+      - chmod +x gradlew
       - ./gradlew assembleRelease
     artifacts:
       - app/build/outputs/**/*.apk
